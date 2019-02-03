@@ -1,0 +1,6 @@
+s.idea
+node_modules
+.env
+.DS_Store
+.scannerwork
+coverage
