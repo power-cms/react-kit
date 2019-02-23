@@ -10,7 +10,7 @@ const Store = ({ children, reducers }) => {
 };
 
 Store.propTypes = {
-  reducers: PropTypes.arrayOf(PropTypes.number).isRequired,
+  reducers: PropTypes.arrayOf(PropTypes.string).isRequired,
   children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]).isRequired,
 };
 

@@ -1,3 +1,4 @@
+import { connect } from 'react-redux';
 import { reduxForm } from 'redux-form';
 import { Actions } from './auth.actions';
 
@@ -9,3 +10,5 @@ export const login = component =>
     onSubmit: async (data, dispatch) => dispatch(Actions.login(data)),
     onSubmitSuccess: (result, dispatch, { history }) => history.push('/'),
   })(component);
+
+export const auth = component => connect(({ auth: { token } }) => ({ isAuthenticated: !!token }))(component);
